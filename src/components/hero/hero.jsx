@@ -50,12 +50,12 @@ const Hero = () => {
             <button className={classes.btn}>Contact</button>
           </div>
           <div className={classes.right}>
-            <div className={classes.rocket_1}>
+            {/* <div className={classes.rocket_1}>
               <Spline scene="https://prod.spline.design/Q60MvKMpYjjytv3x/scene.splinecode" />
             </div>
             <div className={classes.rocket_2}>
               <Spline scene="https://prod.spline.design/JK1Kh-y13ZDjbsH3/scene.splinecode" />
-            </div>
+            </div> */}
             {/* <div className={classes.rocket_3}>
               <Spline scene="https://prod.spline.design/JK1Kh-y13ZDjbsH3/scene.splinecode" />
             </div> */}

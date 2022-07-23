@@ -11,15 +11,15 @@
     font-size: 40px;
     line-height: 78px;
   }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 480px) {
     font-size: 32px;
     line-height: 60px;
   }
-    @media screen and (max-width: 380px) {
+  @media screen and (max-width: 380px) {
     font-size: 30px;
     line-height: 50px;
   }
-      @media screen and (max-width: 340px) {
+  @media screen and (max-width: 340px) {
     font-size: 26px;
     line-height: 50px;
   }
@@ -31,6 +31,30 @@
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: inline-block;
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 88px;
+    // min-width: 160px;
+    color: #ffffff;
+    @media screen and (max-width: 800px) {
+      font-size: 40px;
+      line-height: 78px;
+    }
+    @media screen and (max-width: 480px) {
+      font-size: 32px;
+      line-height: 60px;
+    }
+    @media screen and (max-width: 380px) {
+      font-size: 30px;
+      line-height: 50px;
+    }
+    @media screen and (max-width: 340px) {
+      font-size: 26px;
+      line-height: 50px;
+    }
   }
   span:nth-child(1) {
     animation-delay: 0.1s;

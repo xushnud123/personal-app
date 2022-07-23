@@ -8,7 +8,6 @@
 .wrapper {
   background: transparent;
   margin-top: 80px;
-  margin-bottom: 100px;
   .container {
     @media screen and (max-width: 1400px) {
       padding: 0 60px;
@@ -33,7 +32,7 @@
         grid-template-columns: 50% 50%;
       }
       @media screen and (max-width: 800px) {
-        grid-template-columns:45% 55%;
+        grid-template-columns: 45% 55%;
       }
       @media screen and (max-width: 750px) {
         grid-template-columns: repeat(1, 1fr);
@@ -56,9 +55,9 @@
             display: none;
           }
         }
-         .spline_2 {
+        .spline_2 {
           display: none;
-          @media screen and (max-width: 900px) and (min-width:751px) {
+          @media screen and (max-width: 900px) and (min-width: 751px) {
             display: block;
           }
           height: 600px;
@@ -76,43 +75,58 @@
       }
       .right {
         align-self: center;
-        padding: 20px;
-        height: max-content;
-        background: linear-gradient(to left, #e221b8, #576fc6, #15d7e3);
-        border-radius: 20px;
         @include d_flex(center, center, column);
-        h1 {
-          font-family: "Outfit";
-          font-style: normal;
-          font-weight: 700;
-          font-size: 25px;
-          line-height: 30px;
-          color: #ffffff;
-          text-align: center;
-        }
-        p {
-          margin-top: 20px;
-          font-family: "Outfit";
-          font-style: normal;
-          font-weight: 700;
-          font-size: 20px;
-          line-height: 30px;
-          color: #ffffff;
-          text-align: justify;
-          text-justify: inter-word;
+        .card {
+          padding: 20px 25px;
+          height: max-content;
+          background: linear-gradient(98.23deg, #615EEB 1.97%, #743EAB 74.16%);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          backdrop-filter: blur(3px);
+          -webkit-backdrop-filter: blur(3px);
+          border-radius: 20px;
+          h1 {
+            font-family: "Outfit";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 27px;
+            line-height: 30px;
+            color: #ffffff;
+            text-align: center;
+            text-transform: capitalize;
+            @media screen and (max-width: 900px) {
+                font-size: 22px;
+             }
+          }
+          p {
+            margin-top: 20px;
+            font-family: "Outfit";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 30px;
+            color: #ffffff;
+            text-align: justify;
+            text-justify: inter-word;
+            @media screen and (max-width: 900px) {
+                font-size: 19px;
+             }
+          }
+          &:not(:nth-child(1)) {
+            margin-top: 25px;
+          }
         }
       }
-    //    &:after {
-    //   position: absolute;
-    //   content: "";
-    //   top: -280px;
-    //   right: -50px;
-    //   width: 400px;
-    //   height: 400px;
-    //   background: rgba(66, 33, 99, 0.5);
-    //   filter: blur(100px);
-    //   border-radius: 50%;
-    // }
+      //    &:after {
+      //   position: absolute;
+      //   content: "";
+      //   top: -280px;
+      //   right: -50px;
+      //   width: 400px;
+      //   height: 400px;
+      //   background: rgba(66, 33, 99, 0.5);
+      //   filter: blur(100px);
+      //   border-radius: 50%;
+      // }
     }
   }
 }

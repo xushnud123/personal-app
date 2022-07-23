@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap");
+
+/* Style the accordion section */
+.accordion__section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 25px;
+  height: max-content;
+  background: linear-gradient(98.23deg, #615eeb 1.97%, #743eab 74.16%);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 20px;
+}
+
+.accordion__section:not(:nth-child(1)) {
+  margin-top: 20px;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  padding: 0 !important;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  outline: none;
+  transition: background-color 0.6s ease;
+}
+
+/* Style the accordion content title */
+.accordion__title {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 22px;
+}
+
+.accordion span {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: capitalize;
+}
+/* Style the accordion chevron icon */
+.accordion__icon {
+  margin-left: auto;
+  transition: transform 0.4s ease;
+}
+
+/* Style to rotate icon when state is active */
+.rotate {
+  transform: rotate(90deg);
+}
+
+/* Style the accordion content panel. Note: hidden by default */
+.accordion__content {
+  background-color: transparent;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+/* Style the accordion content text */
+.accordion__text {
+  padding-top: 15px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 25px;
+  color: #ffffff;
+  text-align: justify;
+  text-justify: inter-word;
+  transition: all linear 0.225s;
+}

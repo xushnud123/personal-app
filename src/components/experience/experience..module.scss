@@ -1,0 +1,114 @@
+@mixin d_flex($a: flex-start, $j: flex-start, $f_d: row) {
+  display: flex;
+  align-items: $a;
+  justify-content: $j;
+  flex-direction: $f_d;
+}
+.wrapper {
+  background: transparent;
+  margin-top: 80px;
+  .container {
+    @media screen and (max-width: 1400px) {
+      padding: 0 60px;
+    }
+    @media screen and (max-width: 1200px) {
+      padding: 0 60px;
+    }
+    @media screen and (max-width: 900px) {
+      padding: 0 30px;
+      margin-top: 0;
+    }
+    @media screen and (max-width: 420px) {
+      padding: 0 15px;
+    }
+    .row {
+      max-width: 1250px;
+      margin: 0 auto;
+      .cards {
+        .card {
+          display: grid;
+          grid-template-columns: 30% 70%;
+          @media screen and (max-width: 720px) {
+            grid-template-columns: repeat(1, 1fr);
+          }
+          .left {
+            width: 200px;
+            height: 200px;
+            align-self: center;
+            @media screen and (max-width: 720px) {
+              display: none;
+            }
+          }
+          .right {
+            align-self: center;
+            padding: 20px 25px;
+            height: max-content;
+            background: linear-gradient(
+              98.23deg,
+              #615eeb 1.97%,
+              #743eab 74.16%
+            );
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            border-radius: 20px;
+            h1 {
+              font-family: "Outfit";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 27px;
+              line-height: 30px;
+              color: #ffffff;
+              text-align: center;
+              text-transform: capitalize;
+              @media screen and (max-width: 900px) {
+                font-size: 22px;
+              }
+            }
+            p {
+              margin-top: 20px;
+              font-family: "Outfit";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 22px;
+              line-height: 30px;
+              color: #ffffff;
+              text-align: justify;
+              text-justify: inter-word;
+              transition: all linear 0.225s;
+              @media screen and (max-width: 900px) {
+                font-size: 19px;
+              }
+              @media screen and (max-width: 667px) {
+                margin-top: 10px;
+                height: 0;
+                overflow: hidden;
+              }
+            }
+            .active {
+              @media screen and (max-width: 667px) {
+                height: 150px;
+                overflow: auto;
+              }
+            }
+            @media screen and (max-width: 667px) {
+              padding: 10px 15px;
+            }
+          }
+          &:not(:nth-child(1)) {
+            margin-top: 25px;
+          }
+        }
+        @media screen and (max-width: 667px) {
+          display: none;
+        }
+      }
+      .accordions {
+        @media screen and (min-width: 667px) {
+          display: none;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
