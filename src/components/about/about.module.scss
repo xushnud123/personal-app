@@ -1,0 +1,118 @@
+@mixin d_flex($a: flex-start, $j: flex-start, $f_d: row) {
+  display: flex;
+  align-items: $a;
+  justify-content: $j;
+  flex-direction: $f_d;
+}
+
+.wrapper {
+  background: transparent;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  .container {
+    @media screen and (max-width: 1400px) {
+      padding: 0 60px;
+    }
+    @media screen and (max-width: 1200px) {
+      padding: 0 60px;
+    }
+    @media screen and (max-width: 900px) {
+      padding: 0 30px;
+      margin-top: 0;
+    }
+    @media screen and (max-width: 420px) {
+      padding: 0 15px;
+    }
+    .row {
+      max-width: 1250px;
+      margin: 0 auto;
+      position: relative;
+      display: grid;
+      grid-template-columns: 40% 60%;
+      @media screen and (max-width: 1100px) {
+        grid-template-columns: 50% 50%;
+      }
+      @media screen and (max-width: 800px) {
+        grid-template-columns:45% 55%;
+      }
+      @media screen and (max-width: 750px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 20px;
+        .left {
+          order: 2;
+        }
+        .right {
+          order: 1;
+        }
+      }
+      .left {
+        align-self: center;
+        .spline_1 {
+          height: 740px;
+          @media screen and (min-width: 900px) {
+            display: block;
+          }
+          @media screen and (max-width: 900px) {
+            display: none;
+          }
+        }
+         .spline_2 {
+          display: none;
+          @media screen and (max-width: 900px) and (min-width:751px) {
+            display: block;
+          }
+          height: 600px;
+        }
+        .spline_3 {
+          @media screen and (min-width: 750px) {
+            display: none;
+          }
+          @media screen and (max-width: 750px) {
+            display: block;
+          }
+          display: block;
+          height: 600px;
+        }
+      }
+      .right {
+        align-self: center;
+        padding: 20px;
+        height: max-content;
+        background: linear-gradient(to left, #e221b8, #576fc6, #15d7e3);
+        border-radius: 20px;
+        @include d_flex(center, center, column);
+        h1 {
+          font-family: "Outfit";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 25px;
+          line-height: 30px;
+          color: #ffffff;
+          text-align: center;
+        }
+        p {
+          margin-top: 20px;
+          font-family: "Outfit";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 30px;
+          color: #ffffff;
+          text-align: justify;
+          text-justify: inter-word;
+        }
+      }
+    //    &:after {
+    //   position: absolute;
+    //   content: "";
+    //   top: -280px;
+    //   right: -50px;
+    //   width: 400px;
+    //   height: 400px;
+    //   background: rgba(66, 33, 99, 0.5);
+    //   filter: blur(100px);
+    //   border-radius: 50%;
+    // }
+    }
+  }
+}
