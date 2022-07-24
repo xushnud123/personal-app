@@ -7,8 +7,12 @@
 
 .wrapper {
   background: transparent;
-  margin-top: 80px;
+  padding-top: 80px;
+  position: relative;
+  overflow: hidden;
   .container {
+    position: relative;
+    z-index: 10;
     @media screen and (max-width: 1400px) {
       padding: 0 60px;
     }
@@ -79,7 +83,7 @@
         .card {
           padding: 20px 25px;
           height: max-content;
-          background: linear-gradient(98.23deg, #615EEB 1.97%, #743EAB 74.16%);
+          background: linear-gradient(98.23deg, #615eeb 1.97%, #743eab 74.16%);
           box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
           backdrop-filter: blur(3px);
           -webkit-backdrop-filter: blur(3px);
@@ -94,8 +98,8 @@
             text-align: center;
             text-transform: capitalize;
             @media screen and (max-width: 900px) {
-                font-size: 22px;
-             }
+              font-size: 22px;
+            }
           }
           p {
             margin-top: 20px;
@@ -108,8 +112,8 @@
             text-align: justify;
             text-justify: inter-word;
             @media screen and (max-width: 900px) {
-                font-size: 19px;
-             }
+              font-size: 19px;
+            }
           }
           &:not(:nth-child(1)) {
             margin-top: 25px;
@@ -128,5 +132,16 @@
       //   border-radius: 50%;
       // }
     }
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -290px;
+    width: 580px;
+    height: 580px;
+    background: rgba(66, 33, 99, 0.5);
+    filter: blur(100px);
+    border-radius: 50%;
   }
 }

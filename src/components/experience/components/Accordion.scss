@@ -74,6 +74,10 @@
 /* Style the accordion content text */
 .accordion__text {
   padding-top: 15px;
+}
+
+.accordion__text ul li {
+  margin-top: 10px;
   font-family: "Outfit";
   font-style: normal;
   font-weight: 700;
@@ -82,5 +86,5 @@
   color: #ffffff;
   text-align: justify;
   text-justify: inter-word;
-  transition: all linear 0.225s;
+
 }
