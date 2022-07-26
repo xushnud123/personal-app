@@ -5,6 +5,9 @@ const About = () => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.container}>
+        <div className={classes.rows}>
+          <h1 className={classes.title}>About me</h1>
+        </div>
         <div className={classes.row}>
           <div className={classes.left}>
             {/* <div className={classes.spline_1}>

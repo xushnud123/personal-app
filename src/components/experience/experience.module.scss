@@ -21,9 +21,49 @@
     @media screen and (max-width: 420px) {
       padding: 0 15px;
     }
-    .row {
+    .rows {
       max-width: 1250px;
       margin: 0 auto;
+      .title {
+        font-size: 5rem;
+        color: #ffffff;
+        opacity: 0.4;
+        line-height: 96px;
+        font-weight: 900;
+        text-transform: capitalize;
+        letter-spacing: 40px;
+        font-family: "Outfit";
+        text-align: center;
+        @media screen and (max-width: 850px) {
+          font-size: 70px; 
+          line-height: 90px;
+          letter-spacing: 30px;
+        }
+        @media screen and (max-width: 700px) {
+          font-size: 60px; 
+          line-height: 90px;
+          letter-spacing: 20px;
+        }
+        @media screen and (max-width: 550px) {
+          font-size: 45px; 
+          line-height: 70px;
+          letter-spacing: 15px;
+        }
+        @media screen and (max-width: 430px) {
+          font-size: 40px; 
+          line-height: 70px;
+          letter-spacing: 15px;
+        }
+        @media screen and (max-width: 370px) {
+          font-size: 30px; 
+          line-height: 50px;
+          letter-spacing: 15px;
+        }
+      }
+    }
+    .row {
+      max-width: 1250px;
+      margin: 100px auto 0 auto;
       .cards {
         .card {
           display: grid;
@@ -36,6 +76,7 @@
             height: 200px;
             cursor: pointer;
             align-self: center;
+            display: block;
             @media screen and (max-width: 720px) {
               display: none;
             }
@@ -44,11 +85,7 @@
             align-self: center;
             padding: 20px 30px;
             height: max-content;
-            background: linear-gradient(
-              98.23deg,
-              #615eeb 1.97%,
-              #743eab 74.16%
-            );
+            background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
             box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
             backdrop-filter: blur(3px);
             -webkit-backdrop-filter: blur(3px);
@@ -68,7 +105,7 @@
             }
             ul {
               li {
-                &:not(:nth-child(1)){
+                &:not(:nth-child(1)) {
                   margin-top: 15px;
                 }
                 margin-top: 20px;
@@ -124,6 +161,9 @@
           display: none;
           width: 100%;
         }
+      }
+      @media screen and (max-width: 900px) {
+        margin: 50px auto 0 auto;
       }
     }
   }

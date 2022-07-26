@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import Spline from "@splinetool/react-spline";
 import cx from "classnames";
 import Accordion from "./components/Accordion";
-import classes from "./experience..module.scss";
+import classes from "./experience.module.scss";
 
 const Experience = () => {
   const [open, setOpen] = useState();
   return (
     <div className={classes.wrapper}>
       <div className={classes.container}>
+        <div className={classes.rows}>
+          <h1 className={classes.title}>my experience</h1>
+        </div>
         <div className={classes.row}>
           <div className={classes.cards}>
             <div className={classes.card}>
@@ -17,11 +20,12 @@ const Experience = () => {
               </div>
               <div className={classes.right} onClick={() => setOpen(!open)}>
                 <h1>HTML</h1>
-                <p className={cx(open && classes.active)}>
-                  Hypertext Markup Language, a standardized system for tagging
-                  text files to achieve font, colour, graphic, and hyperlink
-                  effects on World Wide Web pages.
-                </p>
+                <ul>
+                  <li>Custom fills and gradients.</li>
+                  <li>Enhancing links and metadata.</li>
+                  <li>Cascading style sheets.</li>
+                  <li>Inline, internal and external styles.</li>
+                </ul>
               </div>
             </div>
             <div className={classes.card}>
@@ -94,11 +98,11 @@ const Experience = () => {
             <Accordion
               title="HTML"
               content="<ul>
-              <li>
-              Hypertext Markup Language, a standardized system for tagging
-                  text files to achieve font, colour, graphic, and hyperlink
-                  effects on World Wide Web pages.
-              </li></ul>"
+                  <li>Custom fills and gradients.</li>
+                  <li>Enhancing links and metadata.</li>
+                  <li>Cascading style sheets.</li>
+                  <li>Inline, internal and external styles.</li>
+                </ul>"
             />
             <Accordion
               title="Css (library:Scss)"

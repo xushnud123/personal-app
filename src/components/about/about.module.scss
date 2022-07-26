@@ -12,7 +12,6 @@
   overflow: hidden;
   .container {
     position: relative;
-    z-index: 10;
     @media screen and (max-width: 1400px) {
       padding: 0 60px;
     }
@@ -26,9 +25,49 @@
     @media screen and (max-width: 420px) {
       padding: 0 15px;
     }
-    .row {
+    .rows {
       max-width: 1250px;
       margin: 0 auto;
+      .title {
+        font-size: 5rem;
+        color: #ffffff;
+        opacity: 0.4;
+        line-height: 96px;
+        font-weight: 900;
+        text-transform: capitalize;
+        letter-spacing: 40px;
+        font-family: "Outfit";
+        text-align: center;
+        @media screen and (max-width: 850px) {
+          font-size: 70px;
+          line-height: 90px;
+          letter-spacing: 30px;
+        }
+        @media screen and (max-width: 700px) {
+          font-size: 60px;
+          line-height: 90px;
+          letter-spacing: 20px;
+        }
+        @media screen and (max-width: 550px) {
+          font-size: 45px;
+          line-height: 70px;
+          letter-spacing: 15px;
+        }
+        @media screen and (max-width: 430px) {
+          font-size: 40px;
+          line-height: 70px;
+          letter-spacing: 15px;
+        }
+        @media screen and (max-width: 370px) {
+          font-size: 30px;
+          line-height: 50px;
+          letter-spacing: 15px;
+        }
+      }
+    }
+    .row {
+      max-width: 1250px;
+      margin: 80px auto 0 auto;
       position: relative;
       display: grid;
       grid-template-columns: 40% 60%;
@@ -83,7 +122,8 @@
         .card {
           padding: 20px 25px;
           height: max-content;
-          background: linear-gradient(98.23deg, #615eeb 1.97%, #743eab 74.16%);
+          background-color: #21d4fd;
+          background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
           box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
           backdrop-filter: blur(3px);
           -webkit-backdrop-filter: blur(3px);
@@ -120,17 +160,19 @@
           }
         }
       }
-      //    &:after {
-      //   position: absolute;
-      //   content: "";
-      //   top: -280px;
-      //   right: -50px;
-      //   width: 400px;
-      //   height: 400px;
-      //   background: rgba(66, 33, 99, 0.5);
-      //   filter: blur(100px);
-      //   border-radius: 50%;
-      // }
+      .title {
+        font-size: 5rem;
+        color: #ffffff;
+        opacity: 0.4;
+        font-weight: 900;
+        text-transform: capitalize;
+        letter-spacing: 50px;
+        font-family: "Outfit";
+        text-align: center;
+      }
+      @media screen and (max-width: 900px) {
+        margin: 50px auto 0 auto;
+      }
     }
   }
   &:after {
