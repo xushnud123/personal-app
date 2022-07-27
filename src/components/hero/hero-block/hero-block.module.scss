@@ -103,7 +103,7 @@
         .btn {
           user-select: none;
           padding: 13px 40px;
-          background: #4f4db9;
+          background: transparent;
           border-radius: 30px;
           font-family: "Outfit";
           font-style: normal;
@@ -111,35 +111,18 @@
           font-size: 25px;
           line-height: 25px;
           @include d_flex(center);
-          text-align: center;
           letter-spacing: -0.02em;
           color: #ffffff;
-          border: 0;
           cursor: pointer;
           margin-top: 44px;
           position: relative;
           overflow: hidden;
           transition: all linear 0.225s;
-          &::before {
-            transition: all linear 0.225s;
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: -100%;
-            background: linear-gradient(
-              to left,
-              transparent,
-              #ffffff,
-              transparent
-            );
-          }
+          border: 2px solid #ffffff;
+          box-sizing: border-box;
           &:hover {
-            box-shadow: rgba(232, 232, 232, 0.75) 0px 5px 10px;
-            &::before {
-              left: 100%;
-            }
+            border-color: #00b3ff;
+            box-shadow: 0 0 35px #00b3ff;
           }
         }
       }
@@ -172,7 +155,4 @@
       }
     }
   }
-  
 }
-
-

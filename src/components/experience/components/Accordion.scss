@@ -6,15 +6,16 @@
   flex-direction: column;
   padding: 20px 25px;
   height: max-content;
-  background: linear-gradient(98.23deg, #615eeb 1.97%, #743eab 74.16%);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  background: transparent;
+  backdrop-filter: blur(4.5px);
+  -webkit-backdrop-filter: blur(4.5px);
   border-radius: 20px;
+  border: 2px solid #00b3ff;
+  box-shadow: 0 0 25px #00b3ff;
 }
 
 .accordion__section:not(:nth-child(1)) {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
@@ -86,5 +87,4 @@
   color: #ffffff;
   text-align: justify;
   text-justify: inter-word;
-
 }
