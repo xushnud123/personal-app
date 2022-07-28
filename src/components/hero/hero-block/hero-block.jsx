@@ -2,6 +2,8 @@ import Spline from "@splinetool/react-spline";
 import { Link } from "react-scroll";
 import Text from "../text/text";
 
+import rocket from '../../../assets/img/hero/landing-rocket@2x.webp'
+
 import classes from "./hero-block.module.scss";
 
 const HeroBlock = () => {
@@ -30,15 +32,7 @@ const HeroBlock = () => {
             </Link>
           </div>
           <div className={classes.right}>
-            <div className={classes.rocket_1}>
-              <Spline scene="https://prod.spline.design/Q60MvKMpYjjytv3x/scene.splinecode" />
-            </div>
-            <div className={classes.rocket_2}>
-              <Spline scene="https://prod.spline.design/JK1Kh-y13ZDjbsH3/scene.splinecode" />
-            </div>
-            {/* <div className={classes.rocket_3}>
-              <Spline scene="https://prod.spline.design/JK1Kh-y13ZDjbsH3/scene.splinecode" />
-            </div> */}
+            <img src={rocket} alt="" />
           </div>
         </div>
       </div>

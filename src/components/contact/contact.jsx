@@ -2,14 +2,8 @@ import { useState,useRef } from "react";
 import emailjs from "@emailjs/browser";
 import cx from 'classnames'
 
-import { VscGithub } from "react-icons/vsc";
-import { FaFacebookF } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaTelegramPlane } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { BsTelephoneOutbound } from 'react-icons/bs'
-
 import classes from "./contact.module.scss";
+import Cards from "./cards/cards";
 
 const Contact = () => {
   const ref = useRef(null)
@@ -21,6 +15,7 @@ const Contact = () => {
   const isValid = name && email && message
 
   const sendEmail = (e) => {
+    console.log('first')
     e.preventDefault();
 
     emailjs
@@ -53,44 +48,7 @@ const Contact = () => {
           <h1 className={classes.title}>Contact Me</h1>
         </div>
         <div className={classes.row}>
-          <div className={classes.cards}>
-            <a
-              href="https://www.linkedin.com/feed/?trk=404_page"
-              className={classes.card}
-            >
-              <span>
-                <FaLinkedin />
-              </span>
-            </a>
-            <a href="https://github.com/xushnud123" className={classes.card}>
-              <span>
-                <VscGithub />
-              </span>
-            </a>
-            <a href="https://t.me/XushnudbekRaimov" className={classes.card}>
-              <span>
-                <FaTelegramPlane />
-              </span>
-            </a>
-            <a href="https://wa.me/998998820641" className={classes.card}>
-              <span>
-                <FaWhatsapp />
-              </span>
-            </a>
-            <a
-              href="https://facebook.com/XushnudbekRaimov"
-              className={classes.card}
-            >
-              <span>
-                <FaFacebookF />
-              </span>
-            </a>
-            <a href="tel:+998998820641" className={classes.card}>
-              <span>
-                <BsTelephoneOutbound />
-              </span>
-            </a>
-          </div>
+          <Cards/>
         </div>
         <h1 className={classes.name}>Send Message Us</h1>
         <form ref={ref} className={classes.form_wrap} onSubmit={sendEmail}>
@@ -126,11 +84,11 @@ const Contact = () => {
             />
             <label className={classes.label_one}>Message</label>
           </div>
-          <button type="submit" className={cx(classes.btn,succes && classes.btn_active)} disabled={isValid}>
+          <button type="submit" className={cx(classes.btn,succes && classes.btn_active)} >
             {loading ? (
-              <div className={classes.loading}></div>
+              <div className={classes.loading}/>
             ) : succes ? (
-              "Succes🎉"
+              "Succes 🎉"
             ) : (
               "Send Message"
             )}

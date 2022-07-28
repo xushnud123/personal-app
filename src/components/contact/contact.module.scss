@@ -16,7 +16,7 @@
     margin-top: 50px;
   }
   @media screen and (max-width: 800px) {
-    margin-top: 130px;
+    margin-top: 0;
   }
   .container {
     position: relative;
@@ -38,153 +38,6 @@
       margin: 80px auto;
       @media screen and (max-width: 900px) {
         margin: 50px auto;
-      }
-      .cards {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        grid-gap: 20px;
-        box-sizing: border-box;
-        .card {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          justify-self: center;
-          width: 100%;
-          height: 100px;
-          background: red;
-          border-radius: 12px;
-          color: #ffffff;
-          background: rgba(255, 255, 255, 0.25);
-          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-          backdrop-filter: blur(4.5px);
-          -webkit-backdrop-filter: blur(4.5px);
-          border-radius: 10px;
-          border: 1px solid #ffffff2e;
-          cursor: pointer;
-          transition: all linear 0.225s;
-          position: relative;
-          box-sizing: border-box;
-          overflow: hidden;
-          span {
-            transition: all linear 0.225s;
-          }
-          &:nth-child(2) {
-            span {
-              position: relative;
-              z-index: 2;
-              font-size: 50px;
-              height: 50px;
-              color: #9d4edd;
-            }
-          }
-          &:nth-child(1) {
-            span {
-              position: relative;
-              z-index: 2;
-              font-size: 45px;
-              height: 50px;
-              color: #0a66c2;
-            }
-          }
-          &:nth-child(3) {
-            span {
-              position: relative;
-              z-index: 2;
-              font-size: 45px;
-              height: 50px;
-              color: #0088cc;
-            }
-          }
-          &:nth-child(5) {
-            span {
-              position: relative;
-              z-index: 2;
-              font-size: 45px;
-              height: 50px;
-              color: #1877f2;
-            }
-          }
-          &:nth-child(4) {
-            span {
-              position: relative;
-              z-index: 2;
-              font-size: 45px;
-              height: 50px;
-              color: #25d366;
-            }
-          }
-          &:nth-child(6) {
-            span {
-              position: relative;
-              z-index: 2;
-              font-size: 40px;
-              height: 40px;
-              color: #25d366;
-            }
-          }
-          &::before {
-            z-index: 10;
-            width: 100%;
-            height: 4px;
-            border-radius: 2px;
-            left: 0;
-            bottom: 0;
-            content: "";
-            position: absolute;
-            background: transparent;
-            transition: all linear 0.225s;
-          }
-          &:hover {
-            &:nth-child(2) {
-              &::before {
-                @include before;
-                box-shadow: 0 0 10px #9d4edd, 0 0 10px #9d4edd, 0 0 20px #9d4edd,
-                  0 0 40px #9d4edd, 0 0 80px #9d4edd, 0 0 120px #9d4edd;
-              }
-            }
-            &:nth-child(1) {
-              &::before {
-                @include before;
-                box-shadow: 0 0 10px #0a66c2, 0 0 10px #0a66c2, 0 0 20px #0a66c2,
-                  0 0 40px #0a66c2, 0 0 80px #0a66c2, 0 0 120px #0a66c2;
-              }
-            }
-            &:nth-child(3) {
-              &::before {
-                @include before;
-                box-shadow: 0 0 10px #0088cc, 0 0 10px #0088cc, 0 0 20px #0088cc,
-                  0 0 40px #0088cc, 0 0 80px #0088cc, 0 0 120px #0088cc;
-              }
-            }
-            &:nth-child(4) {
-              &::before {
-                @include before;
-                box-shadow: 0 0 10px #25d366, 0 0 10px #25d366, 0 0 20px #25d366,
-                  0 0 40px #25d366, 0 0 80px #25d366, 0 0 120px #25d366;
-              }
-            }
-            &:nth-child(5) {
-              &::before {
-                @include before;
-                box-shadow: 0 0 10px #1877f2, 0 0 10px #1877f2, 0 0 20px #1877f2,
-                  0 0 40px #1877f2, 0 0 80px #1877f2, 0 0 120px #1877f2;
-              }
-            }
-            &:nth-child(6) {
-              &::before {
-                @include before;
-                box-shadow: 0 0 10px #25d366, 0 0 10px #25d366, 0 0 20px #25d366,
-                  0 0 40px #25d366, 0 0 80px #25d366, 0 0 120px #25d366;
-              }
-            }
-          }
-        }
-        @media screen and (max-width: 960px) {
-          grid-template-columns: repeat(3, 1fr);
-        }
-        @media screen and (max-width: 450px) {
-          grid-template-columns: repeat(2, 1fr);
-        }
       }
     }
     h1 {
@@ -401,7 +254,6 @@
         transition: all linear 0.225s;
         border: 2px solid #ffffff;
         box-sizing: border-box;
-
         &:hover {
           border-color: #00b3ff;
           box-shadow: 0 0 35px #00b3ff;
@@ -410,10 +262,7 @@
           border-color: #00b3ff;
           box-shadow: 0 0 35px #00b3ff;
         }
-        @media screen and (max-width: 667px) {
-          font-size: 24px;
-          line-height: 30px;
-        }
+        
         .loading {
           display: inline-block;
           width: 64px;
@@ -429,7 +278,6 @@
           border-radius: 50%;
           background: transparent;
           border: 6px solid #00b3ff;
-          // box-shadow: 0 0 35px #00b3ff;
           border-color: #00b3ff transparent #00b3ff transparent;
           animation: loading 1.2s linear infinite;
         }
@@ -441,7 +289,161 @@
             transform: rotate(360deg);
           }
         }
+        @media screen and (max-width: 667px) {
+          font-size: 22px;
+          line-height: 30px;
+          height: 70px;
+          .loading{
+            width: 50px;
+            height: 50px;
+          }
+            .loading:after{
+              margin-top:4px;
+              width: 38px;
+              height: 38px;
+            }
+        }
       }
     }
   }
 }
+
+
+  .cards {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 20px;
+        box-sizing: border-box;
+        .card {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          justify-self: center;
+          width: 100%;
+          height: 100px;
+          background: red;
+          border-radius: 12px;
+          color: #ffffff;
+          background: rgba(255, 255, 255, 0.25);
+          box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+          backdrop-filter: blur(4.5px);
+          -webkit-backdrop-filter: blur(4.5px);
+          border-radius: 10px;
+          border: 1px solid #ffffff2e;
+          cursor: pointer;
+          transition: all linear 0.225s;
+          position: relative;
+          box-sizing: border-box;
+          overflow: hidden;
+          span {
+            transition: all linear 0.225s;
+             position: relative;
+              z-index: 2;
+              font-size: 45px;
+              height: 50px;
+          }
+          &:nth-child(2) {
+            span {
+              position: relative;
+              z-index: 2;
+              font-size: 50px;
+              height: 50px;
+              color: #9d4edd;
+            }
+          }
+          &:nth-child(1) {
+            span {
+             
+              color: #0a66c2;
+            }
+          }
+          &:nth-child(3) {
+            span {
+            
+              color: #0088cc;
+            }
+          }
+          &:nth-child(5) {
+            span {
+             
+              color: #1877f2;
+            }
+          }
+          &:nth-child(4) {
+            span {
+              
+              color: #25d366;
+            }
+          }
+          &:nth-child(6) {
+            span {
+             
+              font-size: 40px;
+              height: 40px;
+              color: #25d366;
+            }
+          }
+          &::before {
+            z-index: 10;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            left: 0;
+            bottom: 0;
+            content: "";
+            position: absolute;
+            background: transparent;
+            transition: all linear 0.225s;
+          }
+          &:hover {
+            &:nth-child(2) {
+              &::before {
+                @include before;
+                box-shadow: 0 0 10px #9d4edd, 0 0 10px #9d4edd, 0 0 20px #9d4edd,
+                  0 0 40px #9d4edd, 0 0 80px #9d4edd, 0 0 120px #9d4edd;
+              }
+            }
+            &:nth-child(1) {
+              &::before {
+                @include before;
+                box-shadow: 0 0 10px #0a66c2, 0 0 10px #0a66c2, 0 0 20px #0a66c2,
+                  0 0 40px #0a66c2, 0 0 80px #0a66c2, 0 0 120px #0a66c2;
+              }
+            }
+            &:nth-child(3) {
+              &::before {
+                @include before;
+                box-shadow: 0 0 10px #0088cc, 0 0 10px #0088cc, 0 0 20px #0088cc,
+                  0 0 40px #0088cc, 0 0 80px #0088cc, 0 0 120px #0088cc;
+              }
+            }
+            &:nth-child(4) {
+              &::before {
+                @include before;
+                box-shadow: 0 0 10px #25d366, 0 0 10px #25d366, 0 0 20px #25d366,
+                  0 0 40px #25d366, 0 0 80px #25d366, 0 0 120px #25d366;
+              }
+            }
+            &:nth-child(5) {
+              &::before {
+                @include before;
+                box-shadow: 0 0 10px #1877f2, 0 0 10px #1877f2, 0 0 20px #1877f2,
+                  0 0 40px #1877f2, 0 0 80px #1877f2, 0 0 120px #1877f2;
+              }
+            }
+            &:nth-child(6) {
+              &::before {
+                @include before;
+                box-shadow: 0 0 10px #25d366, 0 0 10px #25d366, 0 0 20px #25d366,
+                  0 0 40px #25d366, 0 0 80px #25d366, 0 0 120px #25d366;
+              }
+            }
+          }
+        }
+        @media screen and (max-width: 960px) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        @media screen and (max-width: 450px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }

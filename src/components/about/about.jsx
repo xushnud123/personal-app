@@ -10,7 +10,7 @@ const About = () => {
         </div>
         <div className={classes.row}>
           <div className={classes.left}>
-            <div className={classes.spline_1}>
+            {/* <div className={classes.spline_1}>
               <Spline scene="https://prod.spline.design/fkTeJ93YL-4AJ7Og/scene.splinecode" />
             </div>
             <div className={classes.spline_3}>
@@ -18,7 +18,7 @@ const About = () => {
             </div>
             <div className={classes.spline_2}>
               <Spline scene="https://prod.spline.design/qysRJMoPel1t9HjJ/scene.splinecode" />
-            </div>
+            </div> */}
           </div>
           <div className={classes.right}>
             <div className={classes.card}>

@@ -16,7 +16,7 @@ const Landing = () => {
   useEffect(() => {
     const updateScrollDirection = () => {
       const scrollY = window.scrollY;
-      scrollY > 80 ? setScrollDirection(true) : setScrollDirection(false);
+      scrollY > 0 ? setScrollDirection(true) : setScrollDirection(false);
     };
 
     window.addEventListener("scroll", () => updateScrollDirection()); // add event listener
@@ -25,7 +25,6 @@ const Landing = () => {
     };
   }, [scrollDirection]);
 
-  console.log(scrollDirection);
 
   return (
     <div className={cx(classes.wrapper, scrollDirection && classes.active)}>
