@@ -9,7 +9,6 @@ const Hero = () => {
   return (
     <div className={classes.wrapper}>
      <Navbar/>
-     
      <HeroBlock/>
     </div>
   );

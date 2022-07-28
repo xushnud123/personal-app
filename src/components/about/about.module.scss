@@ -9,7 +9,13 @@
   background: transparent;
   padding-top: 80px;
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
+  @media screen and (max-width: 900px) {
+    padding-top: 50px;
+    &:after{
+      top: -290px;
+    }
+  }
   .container {
     position: relative;
     @media screen and (max-width: 1400px) {
@@ -28,6 +34,8 @@
     .rows {
       max-width: 1250px;
       margin: 0 auto;
+      position: relative;
+      z-index: 1;
       .title {
         font-size: 5rem;
         color: #ffffff;

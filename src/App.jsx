@@ -1,6 +1,6 @@
 import About from "./components/about/about";
 import Contact from "./components/contact/contact";
-import Experience from "./components/experience/experience";
+import Experiences from "./components/experiences/experiences";
 import Hero from "./components/hero/hero";
 import Projects from "./components/projects/projects";
 
@@ -9,7 +9,7 @@ function App() {
     <>
     <Hero/>
     <About/>
-    <Experience/>
+    <Experiences/>
     <Projects/>
     <Contact/>
     </>

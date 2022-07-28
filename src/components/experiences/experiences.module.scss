@@ -1,0 +1,109 @@
+.wrapper {
+  width: 100%;
+  margin-top: 80px;
+  .rows {
+    max-width: 1250px;
+    margin: 0 auto;
+    .title {
+      font-size: 5rem;
+      color: #ffffff;
+      opacity: 0.4;
+      line-height: 96px;
+      font-weight: 900;
+      text-transform: capitalize;
+      letter-spacing: 40px;
+      font-family: "Outfit";
+      text-align: center;
+      @media screen and (max-width: 850px) {
+        font-size: 70px;
+        line-height: 90px;
+        letter-spacing: 30px;
+      }
+      @media screen and (max-width: 700px) {
+        font-size: 60px;
+        line-height: 90px;
+        letter-spacing: 20px;
+      }
+      @media screen and (max-width: 550px) {
+        font-size: 45px;
+        line-height: 70px;
+        letter-spacing: 15px;
+      }
+      @media screen and (max-width: 430px) {
+        font-size: 40px;
+        line-height: 70px;
+        letter-spacing: 15px;
+      }
+      @media screen and (max-width: 370px) {
+        font-size: 30px;
+        line-height: 50px;
+        letter-spacing: 15px;
+      }
+    }
+  }
+  .switch {
+    width: max-content;
+    padding: 2px;
+    margin: 80px auto;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 30px;
+    .card {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #fff;
+      width: 180px;
+      height: 60px;
+      border-radius: 30px;
+      box-sizing: border-box;
+      cursor: pointer;
+      transition: all linear 0.225s;
+      .title {
+        color: #fff;
+        font-family: "Outfit";
+        font-size: 23px;
+        line-height: 26px;
+        font-weight: 600px;
+        text-transform: capitalize;
+        transition: all linear 0.225s;
+      }
+      &:hover {
+        &:hover {
+          border-color: #00b3ff;
+          box-shadow: 0 0 35px #00b3ff;
+        }
+      }
+      &.active {
+        border-color: #00b3ff;
+        box-shadow: 0 0 35px #00b3ff;
+        .title {
+          color: #00b3ff;
+          text-shadow: 0 0 35px #00b3ff;
+        }
+      }
+      @media screen and (max-width: 667px) {
+        width: 150px;
+        height: 50px;
+        .title {
+          font-size: 20px;
+        }
+      }
+      @media screen and (max-width: 667px) {
+        width: 140px;
+        height: 50px;
+        .title {
+          font-size: 20px;
+        }
+      }
+    }
+    @media screen and (max-width: 667px) {
+      grid-gap: 20px;
+    }
+     @media screen and (max-width: 900px) {
+      margin: 50px auto;
+    }
+  }
+}

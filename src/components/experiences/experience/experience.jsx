@@ -9,9 +9,7 @@ const Experience = () => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.container}>
-        <div className={classes.rows}>
-          <h1 className={classes.title}>my experience</h1>
-        </div>
+        <h1>Detailed</h1>
         <div className={classes.row}>
           <div className={classes.cards}>
             <div className={classes.card}>
@@ -86,11 +84,22 @@ const Experience = () => {
               </div>
               <div className={classes.right}>
                 <h1>React js</h1>
-                <p>
-                  Hypertext Markup Language, a standardized system for tagging
-                  text files to achieve font, colour, graphic, and hyperlink
-                  effects on World Wide Web pages.
-                </p>
+                <ul>
+                  <li>Modern JavaScript features</li>
+                  <li>Skills to create reusable parts</li>
+                  <li>
+                    Skills for working with tables and lists with paging,
+                    sorting and searching
+                  </li>
+                  <li>Skills to create forms with validation</li>
+                  <li>Skills to implement routing with React Router</li>
+                  <li>Skills for calling HTTP services with Axios</li>
+                  <li>Skills to implement authentication and authorization</li>
+                  <li>Effective error management and logging</li>
+                  <li>All about function components and hooks</li>
+                  <li>Sharing data using React Context</li>
+                  <li>Write clean, maintainable code like a pro</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -150,11 +159,21 @@ const Experience = () => {
               title="React js"
               content="
              <ul>
-              <li>
-              Hypertext Markup Language, a standardized system for tagging
-                  text files to achieve font, colour, graphic, and hyperlink
-                  effects on World Wide Web pages.
-              </li></ul>"
+                  <li>Modern JavaScript features</li>
+                  <li>Skills to create reusable parts</li>
+                  <li>
+                    Skills for working with tables and lists with paging,
+                    sorting and searching
+                  </li>
+                  <li>Skills to create forms with validation</li>
+                  <li>Skills to implement routing with React Router</li>
+                  <li>Skills for calling HTTP services with Axios</li>
+                  <li>Skills to implement authentication and authorization</li>
+                  <li>Effective error management and logging</li>
+                  <li>All about function components and hooks</li>
+                  <li>Sharing data using React Context</li>
+                  <li>Write clean, maintainable code like a pro</li>
+                </ul>"
             />
           </div>
         </div>

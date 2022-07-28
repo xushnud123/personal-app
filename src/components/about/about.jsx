@@ -3,7 +3,7 @@ import classes from "./about.module.scss";
 
 const About = () => {
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} id="about">
       <div className={classes.container}>
         <div className={classes.rows}>
           <h1 className={classes.title}>About me</h1>

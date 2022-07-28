@@ -51,7 +51,7 @@ const data = [
 
 const Projects = () => {
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} id='projects'>
       <div className={classes.container}>
         <div className={classes.rows}>
           <h1 className={classes.title}>Projects</h1>

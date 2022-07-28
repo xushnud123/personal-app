@@ -12,7 +12,7 @@ const Contact = () => {
   const [email, setEmail] = useState();
   const [message, setMessage] = useState();
   return (
-    <div className={classes.wrapper}>
+    <div className={classes.wrapper} id='contacts'>
       <div className={classes.container}>
         <div className={classes.rows}>
           <h1 className={classes.title}>Contact Me</h1>

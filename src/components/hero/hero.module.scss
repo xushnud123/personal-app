@@ -23,15 +23,20 @@
     filter: blur(100px);
     border-radius: 50%;
   }
-  &:after {
-    position: absolute;
-    content: "";
-    right: 0;
-    bottom: -290px;
-    width: 580px;
-    height: 580px;
-    background: rgba(66, 33, 99, 0.5);
-    filter: blur(100px);
-    border-radius: 50%;
+  // &:after {
+  //   position: absolute;
+  //   content: "";
+  //   right: 0;
+  //   bottom: -290px;
+  //   width: 580px;
+  //   height: 580px;
+  //   background: rgba(66, 33, 99, 0.5);
+  //   filter: blur(100px);
+  //   border-radius: 50%;
+  // }
+  @media screen and (max-width: 900px) {
+        &:after{
+          bottom: -290px;
+        }
   }
 }

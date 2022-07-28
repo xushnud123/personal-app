@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-scroll";
 import cx from "classnames";
 import { AiOutlineAlignRight } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
@@ -21,16 +22,56 @@ const Navbar = () => {
           <div className={cx(classes.nav, open && classes.active)}>
             <ul>
               <li>
-                <a href="#">About me</a>
+                <Link
+                  to="about"
+                  spy
+                  smooth
+                  offset={0}
+                  duration={2000}
+                  type="button"
+                  className={classes.btn}
+                >
+                  About me
+                </Link>
               </li>
               <li>
-                <a href="#">My Experience</a>
+                <Link
+                  to="experience"
+                  spy
+                  smooth
+                  offset={0}
+                  duration={2000}
+                  type="button"
+                  className={classes.btn}
+                >
+                  My Experience
+                </Link>
               </li>
               <li>
-                <a href="#">Projects</a>
+                <Link
+                  to="projects"
+                  spy
+                  smooth
+                  offset={0}
+                  duration={2000}
+                  type="button"
+                  className={classes.btn}
+                >
+                  Projects
+                </Link>
               </li>
               <li>
-                <a href="#">Contacts</a>
+                <Link
+                  to="contacts"
+                  spy
+                  smooth
+                  offset={0}
+                  duration={2000}
+                  type="button"
+                  className={classes.btn}
+                >
+                  Contacts
+                </Link>
               </li>
             </ul>
           </div>
