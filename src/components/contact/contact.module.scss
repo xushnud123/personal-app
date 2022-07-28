@@ -1,7 +1,22 @@
+@mixin before {
+  z-index: 10;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  left: 0;
+  bottom: 0;
+  content: "";
+  position: absolute;
+  background: #fff;
+}
 .wrapper {
-  margin-top: 120px;
+  margin-top: 30px;
+  padding-top: 80px;
   @media screen and (max-width: 900px) {
-        margin-top: 50px;
+    margin-top: 50px;
+  }
+  @media screen and (max-width: 800px) {
+    margin-top: 130px;
   }
   .container {
     position: relative;
@@ -122,90 +137,42 @@
           &:hover {
             &:nth-child(2) {
               &::before {
-                z-index: 10;
-                width: 100%;
-                height: 4px;
-                border-radius: 2px;
-                left: 0;
-                bottom: 0;
-                content: "";
-                position: absolute;
-                background: #fff;
+                @include before;
                 box-shadow: 0 0 10px #9d4edd, 0 0 10px #9d4edd, 0 0 20px #9d4edd,
                   0 0 40px #9d4edd, 0 0 80px #9d4edd, 0 0 120px #9d4edd;
               }
             }
             &:nth-child(1) {
               &::before {
-                z-index: 10;
-                width: 100%;
-                height: 4px;
-                border-radius: 2px;
-                left: 0;
-                bottom: 0;
-                content: "";
-                position: absolute;
-                background: #fff;
+                @include before;
                 box-shadow: 0 0 10px #0a66c2, 0 0 10px #0a66c2, 0 0 20px #0a66c2,
                   0 0 40px #0a66c2, 0 0 80px #0a66c2, 0 0 120px #0a66c2;
               }
             }
             &:nth-child(3) {
               &::before {
-                z-index: 10;
-                width: 100%;
-                height: 4px;
-                border-radius: 2px;
-                left: 0;
-                bottom: 0;
-                content: "";
-                position: absolute;
-                background: #fff;
+                @include before;
                 box-shadow: 0 0 10px #0088cc, 0 0 10px #0088cc, 0 0 20px #0088cc,
                   0 0 40px #0088cc, 0 0 80px #0088cc, 0 0 120px #0088cc;
               }
             }
             &:nth-child(4) {
               &::before {
-                z-index: 10;
-                width: 100%;
-                height: 4px;
-                border-radius: 2px;
-                left: 0;
-                bottom: 0;
-                content: "";
-                position: absolute;
-                background: #fff;
+                @include before;
                 box-shadow: 0 0 10px #25d366, 0 0 10px #25d366, 0 0 20px #25d366,
                   0 0 40px #25d366, 0 0 80px #25d366, 0 0 120px #25d366;
               }
             }
             &:nth-child(5) {
               &::before {
-                z-index: 10;
-                width: 100%;
-                height: 4px;
-                border-radius: 2px;
-                left: 0;
-                bottom: 0;
-                content: "";
-                position: absolute;
-                background: #fff;
+                @include before;
                 box-shadow: 0 0 10px #1877f2, 0 0 10px #1877f2, 0 0 20px #1877f2,
                   0 0 40px #1877f2, 0 0 80px #1877f2, 0 0 120px #1877f2;
               }
             }
             &:nth-child(6) {
               &::before {
-                z-index: 10;
-                width: 100%;
-                height: 4px;
-                border-radius: 2px;
-                left: 0;
-                bottom: 0;
-                content: "";
-                position: absolute;
-                background: #fff;
+                @include before;
                 box-shadow: 0 0 10px #25d366, 0 0 10px #25d366, 0 0 20px #25d366,
                   0 0 40px #25d366, 0 0 80px #25d366, 0 0 120px #25d366;
               }
@@ -427,20 +394,52 @@
         font-style: normal;
         background: transparent;
         border-radius: 20px;
-        padding: 20px 20px;
+        height: 80px;
         color: #fff;
         cursor: pointer;
         position: relative;
         transition: all linear 0.225s;
         border: 2px solid #ffffff;
         box-sizing: border-box;
+
         &:hover {
+          border-color: #00b3ff;
+          box-shadow: 0 0 35px #00b3ff;
+        }
+        &.btn_active {
           border-color: #00b3ff;
           box-shadow: 0 0 35px #00b3ff;
         }
         @media screen and (max-width: 667px) {
           font-size: 24px;
           line-height: 30px;
+        }
+        .loading {
+          display: inline-block;
+          width: 64px;
+          height: 64px;
+          background: transparent;
+        }
+        .loading:after {
+          content: " ";
+          display: block;
+          width: 44px;
+          height: 44px;
+          margin: 8px;
+          border-radius: 50%;
+          background: transparent;
+          border: 6px solid #00b3ff;
+          // box-shadow: 0 0 35px #00b3ff;
+          border-color: #00b3ff transparent #00b3ff transparent;
+          animation: loading 1.2s linear infinite;
+        }
+        @keyframes loading {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
         }
       }
     }

@@ -1,4 +1,3 @@
-import Navbar from './navbar/navbar'
 import HeroBlock from "./hero-block/hero-block";
 
 
@@ -8,8 +7,7 @@ const Hero = () => {
 
   return (
     <div className={classes.wrapper}>
-     <Navbar/>
-     <HeroBlock/>
+      <HeroBlock />
     </div>
   );
 };

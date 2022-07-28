@@ -1,18 +1,53 @@
-import { useState } from "react";
+import { useState,useRef } from "react";
+import emailjs from "@emailjs/browser";
+import cx from 'classnames'
+
 import { VscGithub } from "react-icons/vsc";
 import { FaFacebookF } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { BsTelephoneOutbound } from 'react-icons/bs'
+
 import classes from "./contact.module.scss";
 
 const Contact = () => {
-  const [name,setName] = useState()
-  const [email, setEmail] = useState();
-  const [message, setMessage] = useState();
+  const ref = useRef(null)
+  const [name,setName] = useState('')
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [loading,setLoading] = useState(false)
+  const [succes,setSucces] = useState(false)
+  const isValid = name && email && message
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_mnnpxkc",
+        "template_k2w4vz8",
+        ref.current,
+        "Ubhu0hMFRhm8JQPIp"
+      )
+      .then(
+        (result) => {
+          setLoading(false)
+          setSucces(true)
+          setEmail('')
+          setName('')
+          setMessage('')
+        },
+        (error) => {
+           setLoading(false);
+          console.log(error.text);
+        }
+      );
+  };
+
+
   return (
-    <div className={classes.wrapper} id='contacts'>
+    <div className={classes.wrapper} id="contacts">
       <div className={classes.container}>
         <div className={classes.rows}>
           <h1 className={classes.title}>Contact Me</h1>
@@ -42,7 +77,10 @@ const Contact = () => {
                 <FaWhatsapp />
               </span>
             </a>
-            <a href="https://facebook.com/XushnudbekRaimov" className={classes.card}>
+            <a
+              href="https://facebook.com/XushnudbekRaimov"
+              className={classes.card}
+            >
               <span>
                 <FaFacebookF />
               </span>
@@ -55,7 +93,7 @@ const Contact = () => {
           </div>
         </div>
         <h1 className={classes.name}>Send Message Us</h1>
-        <form className={classes.form_wrap}>
+        <form ref={ref} className={classes.form_wrap} onSubmit={sendEmail}>
           <div className={classes.wrap}>
             <div className={classes.col}>
               <input
@@ -88,7 +126,15 @@ const Contact = () => {
             />
             <label className={classes.label_one}>Message</label>
           </div>
-          <button className={classes.btn}>Send Message</button>
+          <button type="submit" className={cx(classes.btn,succes && classes.btn_active)} disabled={isValid}>
+            {loading ? (
+              <div className={classes.loading}></div>
+            ) : succes ? (
+              "Succes🎉"
+            ) : (
+              "Send Message"
+            )}
+          </button>
         </form>
       </div>
     </div>
