@@ -5,7 +5,7 @@ import { AiOutlineAlignRight } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 
 import classes from './navbar.module.scss'
-import logo from "../../assets/img/hero/text.svg";
+import logo from "assets/img/hero/text.svg";
 
 
 const Navbar = ({open,onOpen}) => {

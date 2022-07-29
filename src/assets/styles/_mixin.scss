@@ -1,0 +1,21 @@
+@mixin d_flex($align, $justify, $diriection: row) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $diriection;
+}
+
+@mixin container_block($width: 100%, $max_width: 100%, $top: 0, $right: 0, $bottom: 0, $left: 0) {
+  width: $width;
+  max-width: $max_width;
+  padding: $top $right $bottom $left;
+}
+
+@mixin text_wrapper($f_size, $l_height, $f_weight: 700, $font_family: 'Neue Machina', $color: var(--secondary)) {
+  font-family: $font_family;
+  font-style: normal;
+  font-weight: $f_weight;
+  font-size: $f_size;
+  line-height: $l_height;
+  color: $color;
+}

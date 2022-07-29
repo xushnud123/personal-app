@@ -1,8 +1,7 @@
-import Spline from "@splinetool/react-spline";
 import { Link } from "react-scroll";
 import Text from "../text/text";
 
-import rocket from '../../../assets/img/hero/landing-rocket@2x.webp'
+import rocket from 'assets/img/hero/landing-rocket@2x.webp'
 
 import classes from "./hero-block.module.scss";
 

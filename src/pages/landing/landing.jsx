@@ -1,18 +1,21 @@
 import { useState, useEffect } from "react";
 import cx from "classnames";
 
-import Hero from "../hero/hero";
-import About from "../about/about";
+import {
+  Navbar,
+  Hero,
+  About,
+  Experiences,
+  Projects,
+  Contact,
+} from "./components";
 
 import classes from "./landing.module.scss";
-import Experiences from "../experiences/experiences";
-import Contact from "../contact/contact";
-import Projects from "../projects/projects";
-import Navbar from "../navbar/navbar";
 
 const Landing = () => {
   const [open, setOpen] = useState();
   const [scrollDirection, setScrollDirection] = useState(false);
+
   useEffect(() => {
     const updateScrollDirection = () => {
       const scrollY = window.scrollY;
@@ -24,7 +27,6 @@ const Landing = () => {
       window.removeEventListener("scroll", () => updateScrollDirection()); // clean up
     };
   }, [scrollDirection]);
-
 
   return (
     <div className={cx(classes.wrapper, scrollDirection && classes.active)}>
