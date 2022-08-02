@@ -12,7 +12,6 @@ const Contact = () => {
   const [message, setMessage] = useState('');
   const [loading,setLoading] = useState(false)
   const [succes,setSucces] = useState(false)
-  const isValid = name && email && message
 
   const sendEmail = (e) => {
     console.log('first')
@@ -48,7 +47,7 @@ const Contact = () => {
           <h1 className={classes.title}>Contact Me</h1>
         </div>
         <div className={classes.row}>
-          <Cards/>
+          <Cards />
         </div>
         <h1 className={classes.name}>Send Message Us</h1>
         <form ref={ref} className={classes.form_wrap} onSubmit={sendEmail}>
@@ -57,21 +56,27 @@ const Contact = () => {
               <input
                 type="text"
                 name="name"
+                id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
               />
-              <label className={classes.label_one}>Name</label>
+              <label className={classes.label_one} htmlFor="name">
+                Name
+              </label>
             </div>
             <div className={classes.col}>
               <input
                 type="email"
                 name="email"
+                id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-              <label className={classes.label_one}>Email</label>
+              <label className={classes.label_one} htmlFor="email">
+                Email
+              </label>
             </div>
           </div>
           <div className={classes.message}>
@@ -82,11 +87,16 @@ const Contact = () => {
               id="message"
               required
             />
-            <label className={classes.label_one}>Message</label>
+            <label className={classes.label_one} htmlFor="message">
+              Message
+            </label>
           </div>
-          <button type="submit" className={cx(classes.btn,succes && classes.btn_active)} >
+          <button
+            type="submit"
+            className={cx(classes.btn, succes && classes.btn_active)}
+          >
             {loading ? (
-              <div className={classes.loading}/>
+              <div className={classes.loading} />
             ) : succes ? (
               "Succes 🎉"
             ) : (

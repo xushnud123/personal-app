@@ -7,13 +7,12 @@
     position: fixed;
     width: 100%;
     z-index: 100;
-  }
-  &.active {
-    overflow: hidden;
-    .row {
+    transition: all linear 0.225s;
+    &.active {
       background-color: #0a0825;
     }
   }
+  overflow: hidden;
   .container {
     margin-top: 120px;
     width: 100%;
@@ -30,7 +29,7 @@
     background: rgba(104, 120, 190, 0.3);
     filter: blur(100px);
     border-radius: 50%;
-    @media screen and (max-width:600px) {
+    @media screen and (max-width: 600px) {
       width: 100%;
     }
   }

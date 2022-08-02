@@ -1,18 +1,22 @@
-
 import { Link, animateScroll as scroll } from "react-scroll";
 import cx from "classnames";
 import { AiOutlineAlignRight } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 
-import classes from './navbar.module.scss'
+import classes from "./navbar.module.scss";
 import logo from "assets/img/hero/text.svg";
 
-
-const Navbar = ({open,onOpen}) => {
+const Navbar = ({ open, onOpen,active }) => {
   return (
-    <div className={cx(classes.wrapper, open && classes.fixed)}>
+    <div
+      className={cx(
+        classes.wrapper,
+        open && classes.fixed,
+        active && classes.shadow
+      )}
+    >
       <div className={classes.container}>
-        <div className={classes.navbar}>
+        <div className={cx(classes.navbar, active && classes.pad)}>
           <div className={classes.logo}>
             <img src={logo} alt="img not found" />
             <div className={classes.btn} onClick={() => onOpen(!open)}>
@@ -26,6 +30,7 @@ const Navbar = ({open,onOpen}) => {
                   to="about"
                   spy
                   smooth
+                  activeClass="active"
                   offset={0}
                   duration={2000}
                   type="button"
@@ -39,6 +44,7 @@ const Navbar = ({open,onOpen}) => {
                   to="experience"
                   spy
                   smooth
+                  activeClass="active"
                   offset={0}
                   duration={2000}
                   type="button"
@@ -52,6 +58,7 @@ const Navbar = ({open,onOpen}) => {
                   to="projects"
                   spy
                   smooth
+                  activeClass="active"
                   offset={0}
                   duration={2000}
                   type="button"
@@ -66,6 +73,7 @@ const Navbar = ({open,onOpen}) => {
                   to="contacts"
                   spy
                   smooth
+                  activeClass="active"
                   offset={0}
                   duration={2000}
                   type="button"

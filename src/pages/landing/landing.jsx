@@ -17,10 +17,8 @@ const Landing = () => {
   const [scrollDirection, setScrollDirection] = useState(false);
 
   useEffect(() => {
-    const updateScrollDirection = () => {
-      const scrollY = window.scrollY;
-      scrollY > 0 ? setScrollDirection(true) : setScrollDirection(false);
-    };
+    const updateScrollDirection = () =>
+      window.scrollY > 0 ? setScrollDirection(true) : setScrollDirection(false);
 
     window.addEventListener("scroll", () => updateScrollDirection()); // add event listener
     return () => {
@@ -29,9 +27,9 @@ const Landing = () => {
   }, [scrollDirection]);
 
   return (
-    <div className={cx(classes.wrapper, scrollDirection && classes.active)}>
-      <div className={cx(classes.row)}>
-        <Navbar open={open} onOpen={setOpen} />
+    <div className={cx(classes.wrapper)}>
+      <div className={cx(classes.row, scrollDirection && classes.active)}>
+        <Navbar open={open} onOpen={setOpen} active={scrollDirection} />
       </div>
       <div className={classes.container}>
         <Hero />
